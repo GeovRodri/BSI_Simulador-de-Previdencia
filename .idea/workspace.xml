@@ -2,11 +2,241 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ceeaebe-0fab-477f-8e70-fd8aa974a9a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/website/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/website/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/bsi_simulador_previdencia.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bsi_simulador_previdencia.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bsi_simulador_previdencia/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bsi_simulador_previdencia/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bsi_simulador_previdencia/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bsi_simulador_previdencia/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/alert.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/badge.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/button.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/chart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/css/font-face.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/css/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fontawesome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-100italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-200italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-300italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-500italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-600italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-700italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-800italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-900italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-italic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/fonts/poppins/poppins-v5-latin-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/forget-pass.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/grid.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/bg-title-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/bg-title-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/Untitled-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/avatar-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/avatar-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/avatar-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/avatar-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/avatar-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/avatar-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/avatar-big-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/logo-blue.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/logo-mini.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/logo-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/images/icon/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/inbox.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/index2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/index3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/index4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/map.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/modal.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/progress-bar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/switch.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/tab.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/typo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/animsition/animsition.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/animsition/animsition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/bootstrap-4.1/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/bootstrap-4.1/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/bootstrap-4.1/popper.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/chartjs/Chart.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/circle-progress/circle-progress.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/circle-progress/circle-progress.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/countdown/countdowntime.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/countdown/jquery.countdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/countdown/moment-timezone-with-data.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/countdown/moment-timezone.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/countdown/moment.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/counter-up/jquery.counterup.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/counter-up/jquery.waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/counter-up/waypoints.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/css-hamburgers/hamburgers.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/css-hamburgers/hamburgers.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-4.7/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/css/fontawesome-all.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-brands-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-brands-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-brands-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-brands-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-brands-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-regular-400.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-regular-400.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-regular-400.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-regular-400.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-regular-400.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-solid-900.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-solid-900.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-solid-900.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-solid-900.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/font-awesome-5/webfonts/fa-solid-900.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/jquery-ui.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/lightbox2/src/css/lightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/lightbox2/src/images/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/lightbox2/src/images/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/lightbox2/src/images/next.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/lightbox2/src/images/prev.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/lightbox2/src/js/lightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/mdi-font/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/mdi-font/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/mdi-font/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/mdi-font/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/mdi-font/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/mdi-font/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/perfect-scrollbar/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/perfect-scrollbar/perfect-scrollbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/perfect-scrollbar/perfect-scrollbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/progressbar/progressbar.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/progressbar/progressbar.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/select2/select2.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/select2/select2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/ajax-loader.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/config.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/fonts/slick.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/fonts/slick.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/fonts/slick.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/fonts/slick.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick-theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick-theme.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/slick/slick.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/smk-accordion/accordion.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/smk-accordion/accordion.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/smk-accordion/accordion.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/sweetalert/sweetalert.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.brazil.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.europe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.france.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.germany.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.russia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.sampledata.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.usa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jquery.vmap.world.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/vector-map/jqvmap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/wow/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/CoolAdmin-master/vendor/wow/wow.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/website/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/website/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,22 +244,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bsi_simulador_previdencia/settings.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/website/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-662">
-              <caret line="56" column="68" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
+            <state relative-caret-position="480">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/website/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/bsi_simulador_previdencia/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+            <state relative-caret-position="244">
+              <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -37,23 +270,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="75">
               <caret line="6" selection-start-line="6" selection-end-line="6" />
-              <folding>
-                <element signature="e#0#36#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bsi_simulador_previdencia/urls.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/website/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding>
-                <element signature="e#649#681#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="138">
+              <caret line="134" column="66" selection-start-line="134" selection-start-column="66" selection-end-line="134" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -67,6 +294,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>BASE_DIR</find>
+      <find>Stat</find>
+      <find>../static/</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -75,9 +309,10 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/bsi_simulador_previdencia/urls.py" />
-        <option value="$PROJECT_DIR$/bsi_simulador_previdencia/settings.py" />
         <option value="$PROJECT_DIR$/website/templates/index.html" />
         <option value="$PROJECT_DIR$/website/views.py" />
+        <option value="$PROJECT_DIR$/bsi_simulador_previdencia/settings.py" />
+        <option value="$PROJECT_DIR$/website/templates/base.html" />
       </list>
     </option>
   </component>
@@ -92,7 +327,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -103,24 +337,38 @@
             <path>
               <item name="bsi_simulador_previdencia" type="b2602c69:ProjectViewProjectNode" />
               <item name="bsi_simulador_previdencia" type="462c0819:PsiDirectoryNode" />
-              <item name="bsi_simulador_previdencia" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bsi_simulador_previdencia" type="b2602c69:ProjectViewProjectNode" />
               <item name="bsi_simulador_previdencia" type="462c0819:PsiDirectoryNode" />
               <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bsi_simulador_previdencia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bsi_simulador_previdencia" type="462c0819:PsiDirectoryNode" />
+              <item name="website" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bsi_simulador_previdencia/settings.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/website/static" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -134,6 +382,31 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Python.DjangoServer" factoryName="Django server" nameIsGenerated="true">
+      <module name="bsi_simulador_previdencia" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -144,30 +417,43 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1555546197797</updated>
+      <workItem from="1557353789000" duration="173000" />
+      <workItem from="1557354120040" duration="4182000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4355000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="-1" width="1366" height="740" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25378788" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32900432" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="0" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32792208" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="SciView" order="0" />
+      <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="3" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -182,35 +468,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bsi_simulador_previdencia/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="120">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="e#649#681#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/website/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/website/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
+        <state relative-caret-position="75">
           <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bsi_simulador_previdencia/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-662">
-          <caret line="56" column="68" selection-start-line="56" selection-start-column="68" selection-end-line="56" selection-end-column="68" />
+        <state relative-caret-position="244">
+          <caret line="118" column="7" selection-start-line="118" selection-start-column="7" selection-end-line="118" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/vendor/bootstrap-4.1/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/fonts/poppins/poppins-v5-latin-100.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/static/css/font-face.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3236" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/website/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="134" column="66" selection-start-line="134" selection-start-column="66" selection-end-line="134" selection-end-column="66" />
         </state>
       </provider>
     </entry>
