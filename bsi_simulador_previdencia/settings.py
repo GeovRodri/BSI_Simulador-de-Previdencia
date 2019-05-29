@@ -25,11 +25,13 @@ SECRET_KEY = '4a)mjorf7otthxilp2c_b_a=k=up%v!z2mcys84%$wo@a@fe=n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+LOGIN_URL = '/login'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login'
 
 # Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -73,14 +75,16 @@ WSGI_APPLICATION = 'bsi_simulador_previdencia.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ['BD_NAME'],
+        'USER': os.environ['BD_USER'],
+        'PASSWORD': os.environ['BD_PASS'],
+        'HOST': os.environ['BD_HOST'],
+        'PORT': os.environ['BD_PORT'],
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
