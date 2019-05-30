@@ -1,33 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form action="" method="post" class="">
-        <div class="form-group">
-            <div class="input-group">
-                <input type="text" id="username2" name="username2" placeholder="Username" class="form-control">
-                <div class="input-group-addon">
-                    <i class="fa fa-user"></i>
-                </div>
+    <form method="POST" class="row">
+        {% csrf_token %}
+
+        {% for field in form %}
+            <div class="form-group col-md-3">
+                <label class="control-label">{{ field.label }}</label>
+                {{ field }}
             </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <input type="email" id="email2" name="email2" placeholder="Email" class="form-control">
-                <div class="input-group-addon">
-                    <i class="fa fa-envelope"></i>
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="input-group">
-                <input type="password" id="password2" name="password2" placeholder="Password" class="form-control">
-                <div class="input-group-addon">
-                    <i class="fa fa-asterisk"></i>
-                </div>
-            </div>
-        </div>
-        <div class="form-actions form-group">
-            <button type="submit" class="btn btn-secondary btn-sm">Submit</button>
+        {% endfor %}
+
+        <div class="form-row form-group col-md-12 justify-content-end">
+            <button class="btn btn-primary" type="submit">Salvar</button>
         </div>
     </form>
 {% endblock content %}
