@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Preencha os dados corretamente! <div style="padding-left: inherit;">{{ form.errors }}</div>
+        </div>
+    {% endif %}
+
     <form method="POST" class="row">
         {% csrf_token %}
 
@@ -16,3 +22,14 @@
         </div>
     </form>
 {% endblock content %}
+
+{% block scripts %}
+    {% if error_message %}
+        <script type="text/javascript">
+            swal({
+                icon: 'warning',
+                text: "{{ error_message }}"
+            });
+        </script>
+    {% endif %}
+{% endblock scripts %}
