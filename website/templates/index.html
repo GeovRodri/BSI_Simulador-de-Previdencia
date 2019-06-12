@@ -26,9 +26,27 @@
 {% block scripts %}
     {% if error_message %}
         <script type="text/javascript">
-            swal({
-                icon: 'warning',
+            swal.fire({
+                type: 'warning',
                 text: "{{ error_message }}"
+            });
+        </script>
+    {% endif %}
+
+    {% if confirm_message %}
+        <script type="text/javascript">
+            swal.fire({
+                type: 'success',
+                text: "{{ confirm_message }}",
+                showCancelButton: true,
+                confirmButtonText: 'Sim',
+                cancelButtonText: 'Não',
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33'
+            }).then(function (result) {
+                if (result.value) {
+                    console.log('oi');
+                }
             });
         </script>
     {% endif %}

@@ -16,3 +16,4 @@ class Aposentados(models.Model):
     data_nascimento = models.DateField()
     tempo_contribuicao = models.IntegerField()
     valor_contribuicao = models.FloatField()
+    valor_aposentadoria = models.FloatField()

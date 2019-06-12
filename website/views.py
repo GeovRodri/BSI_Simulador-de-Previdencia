@@ -1,7 +1,5 @@
 from datetime import datetime
 from math import floor
-
-from django.core.exceptions import ValidationError
 from django.shortcuts import render
 from django.views.generic import FormView
 from website.forms import SimulacaoForm
@@ -10,32 +8,101 @@ from website.forms import SimulacaoForm
 class Simulacao(FormView):
     template_name = 'index.html'
     form_class = SimulacaoForm
+    data_return = None
+
+    def error_message(self, form, message):
+        self.data_return = {'form': form, 'error_message': message}
+
+    def confirm_save(self, form, message):
+        self.data_return = {'form': form, 'confirm_message': message}
 
     def form_valid(self, form):
+        pode_aposentar = self.verificar_requisitos(form)
+
+        if pode_aposentar is True:
+            self.calcular_aposentadoria(form)
+
+        return render(self.request, 'index.html', self.data_return)
+
+    ''' Verificar os requisitos para aposentar '''
+    def verificar_requisitos(self, form):
         data = form.data
+        idade = self.calcular_idade(data)
+        esta_no_pedagio = False
+        pode_aposentar = True
+
+        ''' Idade minima para se aposentar Homem: 65 anos, Mulher: 62 anos'''
         idade_min_m = 65
         idade_min_f = 62
 
-        data_nascimento = datetime.strptime(data['data_nascimento'], '%Y-%m-%d').date()
-        tempo_contribuicao = datetime.strptime(data['data_nascimento'], '%Y-%m-%d').date()
-        actual_date = datetime.now().date()
-
-        idade = floor((actual_date - data_nascimento).days / 365)
-        anos_contribuicao = floor((actual_date - tempo_contribuicao).days / 365)
-
+        ''' 
+                Caso o cliente tenha cumprido os 35, mas não tenha idade, este poderá aposentar se tiver a idade: 
+                Mulher: 53 anos, Homem: 55 anos;
+        '''
+        anos_contribuicao = int(data['tempo_contribuicao'])
         if anos_contribuicao >= 35:
             idade_min_m = 55
             idade_min_f = 53
 
-        try:
-            if anos_contribuicao < 25:
-                raise ValidationError('')
+        idade_faltante = (idade_min_m if data['sexo'] == 'M' else idade_min_f) - idade
+        contribuicao_faltante = 25 - anos_contribuicao
 
-            if (data['sexo'] == 'M' and idade < idade_min_m) or (data['sexo'] == 'F' and idade < idade_min_f):
-                raise ValidationError('')
+        ''' 
+            Pedágio: caso falte apenas 5 anos para aposentar, aplicar-se-á o pedágio. 
+            Será acrescido no tempo de contribuição 30%;
+        '''
+        if contribuicao_faltante <= 5:
+            anos_contribuicao += (anos_contribuicao * 0.3)
+            contribuicao_faltante = 25 - anos_contribuicao
+            esta_no_pedagio = True
 
-            form.data['tempo_contribuicao'] = 4
-        except ValidationError:
-            message = "Faltam {} anos para você aposentar!"\
-                .format((idade_min_m if data['sexo'] == 'M' else idade_min_f) - idade)
-            return render(self.request, 'index.html', {'form': form, 'error_message': message})
+        if anos_contribuicao < 25 or idade_faltante > 0:
+            pode_aposentar = False
+            message = "Faltam {} anos para você aposentar!".format(idade_faltante)
+
+            if esta_no_pedagio is True:
+                message = "Você está na regra do pedágio! Espere só mais um pouco. " \
+                          "Faltam apenas {} anos para você poder se aposentar"\
+                    .format(max(contribuicao_faltante, idade_faltante))
+
+            self.error_message(form, message)
+
+        return pode_aposentar
+
+    ''' Calcular valor da aposentadoria '''
+    def calcular_aposentadoria(self, form):
+        data = form.data
+        valor_total_contribuido = 0
+
+        anos_contribuicao = int(data['tempo_contribuicao'])
+        valor_contribuicao = float(data['valor_contribuicao'])
+
+        for i in range(anos_contribuicao):
+            valor_total_contribuido += valor_contribuicao * anos_contribuicao
+
+        media = valor_total_contribuido / anos_contribuicao
+        valor_aposentadoria = media * 0.7
+
+        for i in range(anos_contribuicao):
+            if 25 < i <= 30:
+                valor_aposentadoria += valor_aposentadoria * 0.015
+            elif 30 < i <= 35:
+                valor_aposentadoria += valor_aposentadoria * 0.02
+            elif i > 35:
+                valor_aposentadoria += valor_aposentadoria * 0.025
+
+        message = "Parabéns, você pode aposentar! O valor da aposentadoria será {}. Deseja aposentar hoje?"\
+            .format(self.real_br_money_mask(valor_aposentadoria))
+        self.confirm_save(form, message)
+
+    def calcular_idade(self, data):
+        data_nascimento = datetime.strptime(data['data_nascimento'], '%Y-%m-%d').date()
+        actual_date = datetime.now().date()
+        idade = floor((actual_date - data_nascimento).days / 365)
+        return idade
+
+    def real_br_money_mask(self, my_value):
+        a = '{:,.2f}'.format(float(my_value))
+        b = a.replace(',', 'v')
+        c = b.replace('.', ',')
+        return c.replace('v', '.')
