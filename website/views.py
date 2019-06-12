@@ -1,8 +1,34 @@
 from datetime import datetime
 from math import floor
-from django.shortcuts import render
-from django.views.generic import FormView
+from django.shortcuts import render, redirect
+from django.views.generic import FormView, ListView
 from website.forms import SimulacaoForm
+from website.models import Aposentados
+
+
+class AposentadosList(ListView):
+    model = Aposentados
+    template_name = 'listar.html'
+
+
+class Aposentar(FormView):
+    template_name = 'index.html'
+    form_class = SimulacaoForm
+
+    def form_valid(self, form):
+        data = form.data
+        aposentado = Aposentados()
+
+        aposentado.nome = data['nome']
+        aposentado.sexo = data['sexo']
+        aposentado.cpf = data['cpf']
+        aposentado.data_nascimento = data['data_nascimento']
+        aposentado.tempo_contribuicao = data['tempo_contribuicao']
+        aposentado.valor_contribuicao = data['valor_contribuicao']
+        aposentado.valor_aposentadoria = Simulacao.calcular_valor_aposentadoria(data)
+
+        aposentado.save()
+        return redirect('/listar')
 
 
 class Simulacao(FormView):
@@ -72,8 +98,15 @@ class Simulacao(FormView):
     ''' Calcular valor da aposentadoria '''
     def calcular_aposentadoria(self, form):
         data = form.data
-        valor_total_contribuido = 0
+        valor_aposentadoria = self.calcular_valor_aposentadoria(data)
 
+        message = "Parabéns, você pode aposentar! O valor da aposentadoria será R$ {}. Deseja aposentar hoje?"\
+            .format(self.real_br_money_mask(valor_aposentadoria))
+        self.confirm_save(form, message)
+
+    @staticmethod
+    def calcular_valor_aposentadoria(data):
+        valor_total_contribuido = 0
         anos_contribuicao = int(data['tempo_contribuicao'])
         valor_contribuicao = float(data['valor_contribuicao'])
 
@@ -91,9 +124,7 @@ class Simulacao(FormView):
             elif i > 35:
                 valor_aposentadoria += valor_aposentadoria * 0.025
 
-        message = "Parabéns, você pode aposentar! O valor da aposentadoria será {}. Deseja aposentar hoje?"\
-            .format(self.real_br_money_mask(valor_aposentadoria))
-        self.confirm_save(form, message)
+        return valor_aposentadoria
 
     def calcular_idade(self, data):
         data_nascimento = datetime.strptime(data['data_nascimento'], '%Y-%m-%d').date()

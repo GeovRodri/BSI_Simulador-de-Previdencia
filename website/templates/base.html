@@ -49,12 +49,12 @@
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active">
+                        <li>
                             <a href="index.html">
                                 <i class="fas fa-chart-bar"></i>Simulação</a>
                         </li>
                         <li>
-                            <a href="listar-aposentados.html">
+                            <a href="/listar">
                                 <i class="far fa-check-square"></i>Listar Aposentados</a>
                         </li>
                     </ul>
@@ -110,11 +110,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-12">
-                                <div class="au-card m-b-30">
-                                    <div class="au-card-inner">
-                                        {% block content %}{% endblock content %}
-                                    </div>
-                                </div>
+                                {% block content %}{% endblock content %}
                             </div>
 
                             <div class="col-12">
