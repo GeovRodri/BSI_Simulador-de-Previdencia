@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mariadb:
+    image: mariadb:10.2
+    environment:
+      MYSQL_ROOT_PASSWORD: ifg
+      MYSQL_DATABASE: bsi_simulador
+      MYSQL_USER: ifg
+      MYSQL_PASSWORD: ifg
+
+  web:
+    image: geovrodri/bsi_previdencia:0.0.1
+    depends_on:
+      - mariadb
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+    environment:
+      BD_NAME: bsi_simulador
+      BD_USER: ifg
+      BD_PASS: ifg
+      BD_HOST: mariadb
+      BD_PORT: 3306
