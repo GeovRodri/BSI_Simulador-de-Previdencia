@@ -10,13 +10,14 @@ services:
       MYSQL_PASSWORD: ifg
 
   web:
-    image: geovrodri/bsi_previdencia:0.0.1
+    build: .
+    #image: geovrodri/bsi_previdencia:0.0.1
     depends_on:
       - mariadb
     volumes:
       - .:/usr/src/app
     ports:
-      - "8000:8000"
+      - "80:80"
     environment:
       BD_NAME: bsi_simulador
       BD_USER: ifg
