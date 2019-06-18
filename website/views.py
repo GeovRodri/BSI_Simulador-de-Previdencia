@@ -111,7 +111,7 @@ class Simulacao(FormView):
         valor_contribuicao = float(data['valor_contribuicao'])
 
         for i in range(anos_contribuicao):
-            valor_total_contribuido += valor_contribuicao * anos_contribuicao
+            valor_total_contribuido += valor_contribuicao * i
 
         media = valor_total_contribuido / anos_contribuicao
         valor_aposentadoria = media * 0.7
