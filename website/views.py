@@ -114,15 +114,17 @@ class Simulacao(FormView):
             valor_total_contribuido += valor_contribuicao * i
 
         media = valor_total_contribuido / anos_contribuicao
-        valor_aposentadoria = media * 0.7
+        valor_inicial = media * 0.7
+        valor_aposentadoria = valor_inicial
 
-        for i in range(anos_contribuicao):
-            if 25 < i <= 30:
-                valor_aposentadoria += valor_aposentadoria * 0.015
-            elif 30 < i <= 35:
-                valor_aposentadoria += valor_aposentadoria * 0.02
-            elif i > 35:
-                valor_aposentadoria += valor_aposentadoria * 0.025
+        if 25 < anos_contribuicao <= 30:
+            valor_aposentadoria = valor_inicial + media * (0.015 * (anos_contribuicao - 25))
+
+        if 30 < anos_contribuicao <= 35:
+            valor_aposentadoria = valor_inicial + media * (0.02 * (anos_contribuicao - 30))
+
+        if anos_contribuicao > 35:
+            valor_aposentadoria = valor_inicial + anos_contribuicao * (0.025 * (anos_contribuicao - 35))
 
         return valor_aposentadoria
 

@@ -28,5 +28,9 @@ class SimulacaoForm(forms.Form):
         widget=forms.NumberInput(attrs={'class': 'form-control'}),
         min_value=1)
 
-    valor_contribuicao = forms.CharField(widget=forms.HiddenInput())
+    valor_contribuicao = forms.FloatField(
+        label='Contribuição(R$/Ano)',
+        widget=forms.NumberInput(attrs={'class': 'form-control'}),
+        initial="0.00")
 
+    # valor_contribuicao = forms.CharField(widget=forms.HiddenInput())
