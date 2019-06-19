@@ -14,13 +14,15 @@
 
                 {% for field in form %}
                     <div class="form-group col-md-3">
-                        <label class="control-label">{{ field.label }}</label>
+                        {% if field.field.widget.input_type != 'hidden'%}
+                            <label class="control-label">{{ field.label }}</label>
+                        {% endif %}
                         {{ field }}
                     </div>
                 {% endfor %}
 
                 <div class="form-row form-group col-md-12 justify-content-end">
-                    <button class="btn btn-primary" type="submit">Salvar</button>
+                    <button class="btn btn-primary" type="button" onclick="preencherValores()">Avançar</button>
                 </div>
             </form>
         </div>
@@ -28,6 +30,37 @@
 {% endblock content %}
 
 {% block scripts %}
+    <script>
+        function gerarCampo(i) {
+            return '     <div class="col-2">' +
+                   '         <label for="ano' + i + '" style="text-align: left;" class="control-label">Valor Ano ' + i + '</label>' +
+                   '         <input id="ano' + i + '" type="number" class="form-control">' +
+                   '     </div>'
+        }
+
+        function preencherValores() {
+            var html = '<div class="col-12">';
+
+            for (var i=1; i <= 10; i++) {
+                html += " " + gerarCampo(i);
+            }
+
+            html += '</div>';
+
+              swal.fire({
+                  title: 'Preencha os valores contribuidos em cada ano:',
+                  width: 1000,
+                  html: html,
+                  preConfirm: function () {
+                      return [
+                          document.getElementById('swal-input1').value,
+                          document.getElementById('swal-input2').value
+                      ]
+                  }
+            });
+        }
+    </script>
+
     {% if error_message %}
         <script type="text/javascript">
             swal.fire({
