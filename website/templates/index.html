@@ -1,31 +1,92 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="au-card m-b-30">
-        <div class="au-card-inner">
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Informações Gerais</strong>
+        </div>
+        <div class="card-body">
+            <div class="au-card-inner">
             {% if form.errors %}
                 <div class="alert alert-danger" role="alert">
                     Preencha os dados corretamente! <div style="padding-left: inherit;">{{ form.errors }}</div>
                 </div>
-            {% endif %}
+                {% endif %}
 
-            <form method="POST" class="row" id="form">
-                {% csrf_token %}
+                <form method="POST" class="row" id="form">
+                    {% csrf_token %}
 
-                {% for field in form %}
-                    <div class="form-group col-md-3">
-                        {% if field.field.widget.input_type != 'hidden'%}
-                            <label class="control-label">{{ field.label }}</label>
-                        {% endif %}
-                        {{ field }}
+                    {% for field in form %}
+                        <div class="form-group col-md-3">
+                            {% if field.field.widget.input_type != 'hidden'%}
+                                <label class="control-label">{{ field.label }}</label>
+                            {% endif %}
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+
+                    <div class="form-row form-group col-md-12 justify-content-end">
+                        {% comment %}<button class="btn btn-primary" type="button" onclick="preencherValores()">Avançar</button>{% endcomment %}
+                        <button class="btn btn-primary" type="submit">Simular</button>
                     </div>
-                {% endfor %}
+                </form>
+            </div>
+        </div>
+    </div>
 
-                <div class="form-row form-group col-md-12 justify-content-end">
-                    {% comment %}<button class="btn btn-primary" type="button" onclick="preencherValores()">Avançar</button>{% endcomment %}
-                    <button class="btn btn-primary" type="submit">Simular</button>
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Ultimos 10 anos de Contribuição</strong>
+        </div>
+        <div class="card-body">
+            <div class="au-card-inner">
+                <div class="table-responsive">
+                    <table class="table table-top-campaign">
+                        <tbody>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano1" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano2" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano3" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano4" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano5" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano6" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano7" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano8" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano9" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2018-09-29</td>
+                                <td><input type="number" name="ano10" class="input-sm form-control-sm form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
 {% endblock content %}

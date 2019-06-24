@@ -23,10 +23,15 @@ class SimulacaoForm(forms.Form):
         widget=forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
         initial='2000-01-01')
 
-    tempo_contribuicao = forms.IntegerField(
-        label='Tempo de Contribuição',
-        widget=forms.NumberInput(attrs={'class': 'form-control'}),
-        min_value=1)
+    data_inicial_contribuicao = forms.DateField(
+        label='Data Inicial da Contribuição',
+        widget=forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+        initial='2000-01-01')
+
+    data_ultima_contribuicao = forms.DateField(
+        label='Data da ultima Contribuição',
+        widget=forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
+        initial='2019-01-01')
 
     valor_contribuicao = forms.FloatField(
         label='Contribuição(R$/Ano)',
