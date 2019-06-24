@@ -33,9 +33,4 @@ class SimulacaoForm(forms.Form):
         widget=forms.DateInput(attrs={'class': 'form-control', 'type': 'date'}),
         initial='2019-01-01')
 
-    valor_contribuicao = forms.FloatField(
-        label='Contribuição(R$/Ano)',
-        widget=forms.NumberInput(attrs={'class': 'form-control'}),
-        initial="0.00")
-
     # valor_contribuicao = forms.CharField(widget=forms.HiddenInput())

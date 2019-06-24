@@ -1670,12 +1670,12 @@
   // jQuery Mask Plugin v1.14.11
   // github.com/igorescobar/jQuery-Mask-Plugin
   var cpfMascara = function (val) {
-     return val.replace(/\D/g, '').length > 11 ? '00.000.000/0000-00' : '000.000.000-009';
+     return val.replace(/\D/g, '').length < 11;
   },
   cpfOptions = {
      onKeyPress: function(val, e, field, options) {
         field.mask(cpfMascara.apply({}, arguments), options);
      }
   };
-  $('.mascara-cpfcnpj').mask(cpfMascara, cpfOptions);
+  $('.mascara-cpfcnpj').mask(cpfMascara, cpfOptions, '000.000.000-00', {reverse: true});
 })(jQuery);

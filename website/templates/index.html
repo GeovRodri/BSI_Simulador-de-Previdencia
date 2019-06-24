@@ -16,15 +16,45 @@
                 <form method="POST" class="row" id="form">
                     {% csrf_token %}
 
-                    {% for field in form %}
-                        <div class="form-group col-md-3">
-                            {% if field.field.widget.input_type != 'hidden'%}
-                                <label class="control-label">{{ field.label }}</label>
-                            {% endif %}
-                            {{ field }}
+                  <div class="row container-fluid">
+                    <div class="col">
+                      <section class="card">
+                        <div class="card-body text-secondary">Nome<input type="text" name="nome" required class="input-sm form-control-sm form-control"></div>
+                      </section>
+                    </div>
+                    <div class="col">
+                      <section class="card">
+                        <div class="card-body text-secondary" required>Sexo
+                            <select name="sexo" class="form-control">
+                                <option value="masculino">Maculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
                         </div>
-                    {% endfor %}
-
+                      </section>
+                    </div>
+                    <div class="col">
+                      <section class="card">
+                        <div class="card-body text-secondary">CPF<input class="form-control mascara-cpfcnpj" maxlength=11 type="text"/></div>
+                      </section>
+                    </div>
+                  </div>
+                  <div class="row container-fluid">
+                    <div class="col">
+                      <section class="card">
+                        <div class="card-body text-secondary">Data de Nascimento<input type="date" name="nascimento" required class="input-sm form-control-sm form-control"></div>
+                      </section>
+                    </div>
+                    <div class="col">
+                      <section class="card">
+                        <div class="card-body text-secondary">Data da primeira Contribuição<input type="date" name="primeira-contribuição" required class="input-sm form-control-sm form-control"></div>
+                      </section>
+                    </div>
+                    <div class="col">
+                      <section class="card">
+                        <div class="card-body text-secondary">Data da ultima Contribuição<input type="date" name="ultima-contribuição" required class="input-sm form-control-sm form-control"></div>
+                      </section>
+                    </div>
+                  </div>
                     <div class="form-row form-group col-md-12 justify-content-end">
                         {% comment %}<button class="btn btn-primary" type="button" onclick="preencherValores()">Avançar</button>{% endcomment %}
                         <button class="btn btn-primary" type="submit">Simular</button>
@@ -37,58 +67,92 @@
     <div class="card">
         <div class="card-header">
             <strong class="card-title">Ultimos 10 anos de Contribuição</strong>
-        </div>
-        <div class="card-body">
-            <div class="au-card-inner">
-                <div class="table-responsive m-b-40">
-                    <table class="table table-top-campaign">
-                        <tbody>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano1" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano2" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano3" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano4" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano5" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano6" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano7" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano8" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano9" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                            <tr>
-                                <td>2019</td>
-                                <td><input type="number" name="ano10" class="input-sm form-control-sm form-control"></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+        </div><br>
+        <div class="row container-fluid">
+          <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano1" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+          <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano2" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+          <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano3" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+          <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano4" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+          <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano5" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+          <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano6" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+                <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano7" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+                <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano8" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+                <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano9" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
+                <div class="col">
+            <section class="card">
+              <div class="card-body text-secondary">
+                <label>2019</label>
+                <input type="number" name="ano10" class="input-sm form-control-sm form-control">
+              </div>
+            </section>
+          </div>
         </div>
     </div>
+
+
 {% endblock content %}
 
 {% block scripts %}
