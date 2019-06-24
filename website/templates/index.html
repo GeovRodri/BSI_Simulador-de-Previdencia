@@ -1,192 +1,132 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="card">
-        <div class="card-header">
-            <strong class="card-title">Informações Gerais</strong>
+    {% if form.errors %}
+        <div class="alert alert-danger" role="alert">
+            Preencha os dados corretamente!
+            <div style="padding-left: inherit;">{{ form.errors }}</div>
         </div>
-        <div class="card-body">
-            <div class="au-card-inner">
-            {% if form.errors %}
-                <div class="alert alert-danger" role="alert">
-                    Preencha os dados corretamente! <div style="padding-left: inherit;">{{ form.errors }}</div>
-                </div>
-                {% endif %}
+    {% endif %}
 
-                <form method="POST" class="row" id="form">
-                    {% csrf_token %}
+    <form method="POST" id="form">
+        {% csrf_token %}
 
-                  <div class="row container-fluid">
-                    <div class="col">
-                      <section class="card">
-                        <div class="card-body text-secondary">Nome<input type="text" name="nome" required class="input-sm form-control-sm form-control"></div>
-                      </section>
-                    </div>
-                    <div class="col">
-                      <section class="card">
-                        <div class="card-body text-secondary" required>Sexo
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Informações Gerais</strong>
+            </div>
+            <div class="card-body">
+                <div class="au-card-inner">
+                    <div class="row">
+                        <div class="form-group col-7">
+                            <label class="control-label">Nome</label>
+                            <input type="text" name="nome" required class="form-control">
+                        </div>
+
+
+                        <div class="form-group col-2">
+                            <label class="control-label">Sexo</label>
                             <select name="sexo" class="form-control">
                                 <option value="masculino">Maculino</option>
                                 <option value="feminino">Feminino</option>
                             </select>
                         </div>
-                      </section>
+
+                        <div class="form-group col-3">
+                            <label class="control-label">CPF</label>
+                            <input class="form-control cpf" maxlength=11 type="text"/>
+                        </div>
                     </div>
-                    <div class="col">
-                      <section class="card">
-                        <div class="card-body text-secondary">CPF<input class="form-control cpf" maxlength=11 type="text"/></div>
-                      </section>
+
+                    <div class="row">
+                        <div class="form-group col-4">
+                            <label class="control-label">Data de Nascimento</label>
+                            <input type="date" name="nascimento" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-4">
+                            <label class="control-label">Primeira Contribuição</label>
+                            <input type="date" name="primeira-contribuição" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-4">
+                            <label class="control-label">Última Contribuição</label>
+                            <input type="date" name="ultima-contribuição" required class="form-control">
+                        </div>
                     </div>
-                  </div>
-                  <div class="row container-fluid">
-                    <div class="col">
-                      <section class="card">
-                        <div class="card-body text-secondary">Data de Nascimento<input type="date" name="nascimento" required class="input-sm form-control-sm form-control"></div>
-                      </section>
-                    </div>
-                    <div class="col">
-                      <section class="card">
-                        <div class="card-body text-secondary">Data da primeira Contribuição<input type="date" name="primeira-contribuição" required class="input-sm form-control-sm form-control"></div>
-                      </section>
-                    </div>
-                    <div class="col">
-                      <section class="card">
-                        <div class="card-body text-secondary">Data da ultima Contribuição<input type="date" name="ultima-contribuição" required class="input-sm form-control-sm form-control"></div>
-                      </section>
-                    </div>
-                  </div>
-                    <div class="form-row form-group col-md-12 justify-content-end">
-                        {% comment %}<button class="btn btn-primary" type="button" onclick="preencherValores()">Avançar</button>{% endcomment %}
-                        <button class="btn btn-primary" type="submit">Simular</button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="card">
-        <div class="card-header">
-            <strong class="card-title">Ultimos 10 anos de Contribuição</strong>
-        </div><br>
-        <div class="row container-fluid">
-          <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano1" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-          <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano2" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-          <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano3" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-          <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano4" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-          <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano5" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-          <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano6" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-                <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano7" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-                <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano8" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-                <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano9" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
-                <div class="col">
-            <section class="card">
-              <div class="card-body text-secondary">
-                <label>2019</label>
-                <input type="number" name="ano10" class="input-sm form-control-sm form-control">
-              </div>
-            </section>
-          </div>
+        <div class="card">
+            <div class="card-header">
+                <strong class="card-title">Ultimos 10 anos de Contribuição</strong>
+            </div>
+
+            <div class="card-body">
+                <div class="au-card-inner">
+                    <div class="row">
+                        <div class="form-group col-2">
+                            <label class="control-label">2010</label>
+                            <input type="text" name="ano1" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2011</label>
+                            <input type="text" name="ano2" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2012</label>
+                            <input type="text" name="ano3" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2013</label>
+                            <input type="text" name="ano4" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2014</label>
+                            <input type="text" name="ano5" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2015</label>
+                            <input type="text" name="ano6" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2016</label>
+                            <input type="text" name="ano7" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2017</label>
+                            <input type="text" name="ano8" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2018</label>
+                            <input type="text" name="ano9" required class="form-control">
+                        </div>
+
+                        <div class="form-group col-2">
+                            <label class="control-label">2019</label>
+                            <input type="text" name="ano10" required class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-
+        <div class="form-row form-group col-md-12 justify-content-end">
+            <button class="btn btn-primary" type="submit">Simular</button>
+        </div>
+    </form>
 {% endblock content %}
 
 {% block scripts %}
-    <script>
-        function gerarCampo(i) {
-            return '     <div class="col-2">' +
-                   '         <label for="ano' + i + '" style="text-align: left;" class="control-label">Valor Ano ' + i + '</label>' +
-                   '         <input id="ano' + i + '" type="number" class="form-control">' +
-                   '     </div>'
-        }
-
-        function preencherValores() {
-            var html = '<div class="col-12">';
-
-            for (var i=1; i <= 10; i++) {
-                html += " " + gerarCampo(i);
-            }
-
-            html += '</div>';
-
-              swal.fire({
-                  title: 'Preencha os valores contribuidos em cada ano:',
-                  width: 1000,
-                  html: html,
-                  preConfirm: function () {
-                      return [
-                          document.getElementById('swal-input1').value,
-                          document.getElementById('swal-input2').value
-                      ]
-                  }
-            });
-        }
-    </script>
-
     {% if error_message %}
         <script type="text/javascript">
             swal.fire({
