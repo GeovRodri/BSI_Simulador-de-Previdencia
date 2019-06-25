@@ -1,43 +1,102 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="table-responsive table--no-card m-b-30">
-        <table class="table table-borderless table-striped table-earning">
-            <thead>
+    <div class="card">
+        <div class="card-header">
+            <strong class="card-title">Listar</strong>
+        </div>
+        <div class="card-body">
+            <div class="au-card-inner">
+                <table class="table table-striped table-borderless" id="sampleTable">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Sexo</th>
+                            <th>CPF</th>
+                            <th class="text-right">Valor</th>
+                            <th class="text-right">Apto.</th>
+                            <th class="text-right">Aposentado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
 
-                <tr>
-                    <th>Nome</th>
-                    <th>Sexo</th>
-                    <th>CPF</th>
-                    <th>Aptos</th>
-                    <th>Aposentados</th>
-                    <th>
-                    <input class="au-input" type="number" name="filtrar_cpf" placeholder="Filtrar por CPF" />
-                        <button class="au-btn-filter">
-                            <i class="zmdi zmdi-filter-list"></i></button>
-                        </button>
-                    </th>
-                    <th class="text-right">Valor Aposentadoria</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for aposentado in object_list %}
-                    <tr>
-                        <td>{{ aposentado.nome }}</td>
-                        <td>
-                            {% if aposentado.sexo == 'F' %}
-                                Feminino
-                            {% else %}
-                                Masculino
-                            {% endif %}
-                        </td>
-                        <td>{{ aposentado.cpf }}</td>
-                        <td class="text-right">
-                            R$ {{ aposentado.valor_aposentadoria }}
-                        </td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                    <tbody>
+                        {% for aposentado in object_list %}
+                            <tr>
+                                <td>{{ aposentado.nome }}</td>
+                                <td>
+                                    {% if aposentado.sexo == 'F' %}
+                                        Feminino
+                                    {% else %}
+                                        Masculino
+                                    {% endif %}
+                                </td>
+                                <td>{{ aposentado.cpf }}</td>
+                                <td class="text-right">
+                                    R$ {{ aposentado.valor_aposentadoria | default_if_none:"" }}
+                                </td>
+
+                                <td class="text-center">
+                                    {% if aposentado.apto == True %}
+                                        <i class="fas fa-check-circle" style="color: green;"></i>
+                                    {% else %}
+                                        <i class="fas fa-circle" style="color: red;"></i>
+                                    {% endif %}
+                                </td>
+
+                                <td class="text-center">
+                                    {% if aposentado.aposentado == True %}
+                                        <i class="fas fa-check-circle" style="color: green;"></i>
+                                    {% else %}
+                                        <i class="fas fa-circle" style="color: red;"></i>
+                                    {% endif %}
+                                </td>
+
+                                <td style="text-align: center;">
+                                    <form id="delete-{{ aposentado.id }}" style="display: none;" action="/delete/{{aposentado.id}}/" method="POST">
+                                        {% csrf_token %}
+                                        <input type="submit" value="delete">
+                                    </form>
+
+                                    <a href="/{{ aposentado.id }}">
+                                        <i class="fas fa-edit"></i>
+                                    </a>
+
+                                    <button class="btn btn-link" onclick="deleteSimulacao({{ aposentado.id }})" style="color: red; padding: 0;">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 {% endblock content %}
+
+{% block scripts %}
+    <script type="text/javascript">
+        $('#sampleTable').DataTable(
+            {
+                "language": {"url": "https://cdn.datatables.net/plug-ins/1.10.12/i18n/Portuguese-Brasil.json"}
+            }
+        );
+
+        function deleteSimulacao(simulacaoId) {
+            swal.fire({
+                title: 'Deseja realmente excluir essa simulação?',
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Excluir'
+            }).then(function (result) {
+                if (result.value) {
+                    var form = document.getElementById('delete-' + simulacaoId);
+                    form.submit();
+                }
+            })
+        }
+    </script>
+{% endblock scripts %}

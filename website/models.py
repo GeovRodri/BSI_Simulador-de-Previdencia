@@ -27,3 +27,5 @@ class Simulacoes(models.Model):
     ano9 = models.FloatField()
     ano10 = models.FloatField()
     valor_aposentadoria = models.FloatField(null=True, blank=True)
+    apto = models.BooleanField(default=False)
+    aposentado = models.BooleanField(default=False)
