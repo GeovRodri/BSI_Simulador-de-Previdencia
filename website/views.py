@@ -1,7 +1,10 @@
 from datetime import datetime
 from math import floor
+
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
-from django.views.generic import FormView, ListView
+from django.urls import reverse
+from django.views.generic import FormView, ListView, DeleteView, UpdateView
 from website.forms import SimulacaoForm
 from website.models import Simulacoes
 
@@ -9,6 +12,19 @@ from website.models import Simulacoes
 class AposentadosList(ListView):
     model = Simulacoes
     template_name = 'listar.html'
+
+
+class AposentadosDelete(DeleteView):
+    model = Simulacoes
+
+    def get_success_url(self):
+        return reverse('listar')
+
+
+@login_required
+def updateAposentado(request, key):
+    form = Simulacoes.objects.get(id=key)
+    return render(request, 'index.html', {'form': form})
 
 
 class Aposentar(FormView):
@@ -19,7 +35,7 @@ class Aposentar(FormView):
         data = form.save(commit=False)
         data.valor_aposentadoria = Simulacao.calcular_valor_aposentadoria(data)
         data.save()
-        return redirect('/listar')
+        return reverse('listar')
 
 
 class Simulacao(FormView):
