@@ -1670,4 +1670,8 @@
   // jQuery Mask Plugin v1.14.11
   // github.com/igorescobar/jQuery-Mask-Plugin
   $('.cpf').mask('000.000.000-00', {reverse: true});
+
+  var today = moment().format('YYYY-MM-DD');
+  $('#primeira_contribuição').val(today);
+  $('#ultima_contribuição').val(today);
 })(jQuery);

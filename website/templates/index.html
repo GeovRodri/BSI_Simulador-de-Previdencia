@@ -20,38 +20,39 @@
                     <div class="row">
                         <div class="form-group col-7">
                             <label class="control-label">Nome</label>
-                            <input type="text" name="nome" required class="form-control">
+                            <input type="text" name="nome" required autofocus class="form-control" value="{{ form.nome.value }}">
                         </div>
 
 
                         <div class="form-group col-2">
                             <label class="control-label">Sexo</label>
-                            <select name="sexo" class="form-control">
-                                <option value="masculino">Maculino</option>
-                                <option value="feminino">Feminino</option>
+                            <select name="sexo" class="form-control" value="{{ form.sexo.value }}">
+                                <option value="M">Maculino</option>
+                                <option value="F">Feminino</option>
                             </select>
                         </div>
 
                         <div class="form-group col-3">
                             <label class="control-label">CPF</label>
-                            <input class="form-control cpf" minlength="14" maxlength="14" type="text"/>
+                            <input class="form-control cpf" name="cpf" minlength="14" maxlength="14" type="text" required
+                                   value="{{ form.cpf.value }}"/>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="form-group col-4">
                             <label class="control-label">Data de Nascimento</label>
-                            <input type="date" name="nascimento" required class="form-control">
+                            <input type="date" name="nascimento" id="nascimento" required class="form-control" value="{{ form.nascimento.value }}">
                         </div>
 
                         <div class="form-group col-4">
                             <label class="control-label">Primeira Contribuição</label>
-                            <input type="date" name="primeira-contribuição" required class="form-control">
+                            <input type="date" name="primeira_contribuicao" id="primeira_contribuição" required class="form-control" value="{{ form.primeira_contribuicao.value }}">
                         </div>
 
                         <div class="form-group col-4">
                             <label class="control-label">Última Contribuição</label>
-                            <input type="date" name="ultima-contribuição" required class="form-control">
+                            <input type="date" name="ultima_contribuicao" id="ultima_contribuição" required class="form-control" value="{{ form.ultima_contribuição.value }}">
                         </div>
                     </div>
                 </div>
@@ -68,52 +69,52 @@
                     <div class="row">
                         <div class="form-group col-2">
                             <label class="control-label">2010</label>
-                            <input type="text" name="ano1" required class="form-control">
+                            <input type="number" name="ano1" required class="form-control" value="{{ form.ano1.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2011</label>
-                            <input type="text" name="ano2" required class="form-control">
+                            <input type="number" name="ano2" required class="form-control" value="{{ form.ano2.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2012</label>
-                            <input type="text" name="ano3" required class="form-control">
+                            <input type="number" name="ano3" required class="form-control" value="{{ form.ano3.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2013</label>
-                            <input type="text" name="ano4" required class="form-control">
+                            <input type="number" name="ano4" required class="form-control" value="{{ form.ano4.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2014</label>
-                            <input type="text" name="ano5" required class="form-control">
+                            <input type="number" name="ano5" required class="form-control" value="{{ form.ano5.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2015</label>
-                            <input type="text" name="ano6" required class="form-control">
+                            <input type="number" name="ano6" required class="form-control" value="{{ form.ano6.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2016</label>
-                            <input type="text" name="ano7" required class="form-control">
+                            <input type="number" name="ano7" required class="form-control" value="{{ form.ano7.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2017</label>
-                            <input type="text" name="ano8" required class="form-control">
+                            <input type="number" name="ano8" required class="form-control" value="{{ form.ano8.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2018</label>
-                            <input type="text" name="ano9" required class="form-control">
+                            <input type="number" name="ano9" required class="form-control" value="{{ form.ano9.value }}">
                         </div>
 
                         <div class="form-group col-2">
                             <label class="control-label">2019</label>
-                            <input type="text" name="ano10" required class="form-control">
+                            <input type="number" name="ano10" required class="form-control" value="{{ form.ano10.value }}">
                         </div>
                     </div>
                 </div>

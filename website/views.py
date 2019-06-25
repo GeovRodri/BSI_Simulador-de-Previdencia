@@ -65,7 +65,7 @@ class Simulacao(FormView):
                 Caso o cliente tenha cumprido os 35, mas não tenha idade, este poderá aposentar se tiver a idade: 
                 Mulher: 53 anos, Homem: 55 anos;
         '''
-        anos_contribuicao = int(data['tempo_contribuicao'])
+        anos_contribuicao = 10# int(data['tempo_contribuicao'])
         if anos_contribuicao >= 35:
             idade_min_m = 55
             idade_min_f = 53
@@ -107,8 +107,8 @@ class Simulacao(FormView):
     @staticmethod
     def calcular_valor_aposentadoria(data):
         valor_total_contribuido = 0
-        anos_contribuicao = int(data['tempo_contribuicao'])
-        valor_contribuicao = float(data['valor_contribuicao'])
+        anos_contribuicao = 3# int(data['tempo_contribuicao'])
+        valor_contribuicao = 5#float(data['valor_contribuicao'])
 
         for i in range(anos_contribuicao):
             valor_total_contribuido += valor_contribuicao * i
@@ -129,8 +129,8 @@ class Simulacao(FormView):
         return valor_aposentadoria
 
     def calcular_idade(self, data):
-        data_nascimento = datetime.strptime(data['data_nascimento'], '%Y-%m-%d').date()
-        actual_date = datetime.now().date()
+        data_nascimento = datetime.strptime(data['nascimento'], '%Y-%m-%d').date()
+        actual_date = datetime.strptime(data['ultima_contribuicao'], '%Y-%m-%d').date()
         idade = floor((actual_date - data_nascimento).days / 365)
         return idade
 
