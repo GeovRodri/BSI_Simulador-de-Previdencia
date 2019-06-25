@@ -3,11 +3,11 @@ from math import floor
 from django.shortcuts import render, redirect
 from django.views.generic import FormView, ListView
 from website.forms import SimulacaoForm
-from website.models import Aposentados
+from website.models import Simulacoes
 
 
 class AposentadosList(ListView):
-    model = Aposentados
+    model = Simulacoes
     template_name = 'listar.html'
 
 
@@ -16,18 +16,9 @@ class Aposentar(FormView):
     form_class = SimulacaoForm
 
     def form_valid(self, form):
-        data = form.data
-        aposentado = Aposentados()
-
-        aposentado.nome = data['nome']
-        aposentado.sexo = data['sexo']
-        aposentado.cpf = data['cpf']
-        aposentado.data_nascimento = data['data_nascimento']
-        aposentado.tempo_contribuicao = data['tempo_contribuicao']
-        aposentado.valor_contribuicao = data['valor_contribuicao']
-        aposentado.valor_aposentadoria = Simulacao.calcular_valor_aposentadoria(data)
-
-        aposentado.save()
+        data = form.save(commit=False)
+        data.valor_aposentadoria = Simulacao.calcular_valor_aposentadoria(data)
+        data.save()
         return redirect('/listar')
 
 
@@ -43,6 +34,11 @@ class Simulacao(FormView):
         self.data_return = {'form': form, 'confirm_message': message}
 
     def form_valid(self, form):
+        # Removendo dados anteriores do cpf para não ter dados repetidos
+        data = form.save(commit=False)
+        Simulacoes.objects.filter(cpf=data.cpf).delete()
+        data.save()
+
         pode_aposentar = self.verificar_requisitos(form)
 
         if pode_aposentar is True:

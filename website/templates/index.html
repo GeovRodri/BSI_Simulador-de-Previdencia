@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="form-group col-7">
                             <label class="control-label">Nome</label>
-                            <input type="text" name="nome" required autofocus class="form-control" value="{{ form.nome.value }}">
+                            <input type="text" name="nome" required autofocus class="form-control" value="{{ form.nome.value|default_if_none:"" }}">
                         </div>
 
 
