@@ -131,19 +131,20 @@ class Simulacao(FormView):
     @staticmethod
     def calcular_valor_aposentadoria(data):
         anos_contribuicao = Simulacao.calcular_ano_de_contribuicao(data)
+        ano_simulacao = data.ultima_contribuicao.year
 
         """ Calcular todo valor contribuido e a média de valor """
         valor_contribuicao = 0
-        valor_contribuicao += float(data.ano1)
-        valor_contribuicao += float(data.ano2)
-        valor_contribuicao += float(data.ano3)
-        valor_contribuicao += float(data.ano4)
-        valor_contribuicao += float(data.ano5)
-        valor_contribuicao += float(data.ano6)
-        valor_contribuicao += float(data.ano7)
-        valor_contribuicao += float(data.ano8)
-        valor_contribuicao += float(data.ano9)
-        valor_contribuicao += float(data.ano10)
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano1, (ano_simulacao - 9))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano2, (ano_simulacao - 8))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano3, (ano_simulacao - 7))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano4, (ano_simulacao - 6))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano5, (ano_simulacao - 5))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano6, (ano_simulacao - 4))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano7, (ano_simulacao - 3))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano8, (ano_simulacao - 2))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano9, (ano_simulacao - 1))
+        valor_contribuicao += Simulacao.calcular_inflacao(data.ano10, ano_simulacao)
         media = valor_contribuicao / 10
 
         valor_inicial = media * 0.7
@@ -159,6 +160,21 @@ class Simulacao(FormView):
             valor_aposentadoria = valor_inicial + anos_contribuicao * (0.025 * (anos_contribuicao - 35))
 
         return valor_aposentadoria, media, anos_contribuicao
+
+    @staticmethod
+    def calcular_inflacao(valor, ano):
+        valor = float(valor)
+        ano_atual = datetime.now().year
+        inflacoes = {'1997': 5.22, '1998': 1.65, '1999': 8.94, '2000': 5.97, '2001': 7.67, '2002': 12.53, '2003': 9.30,
+                     '2004': 7.6, '2005': 5.69, '2006': 3.14, '2007': 4.46, '2008': 5.9, '2009': 4.31, '2010': 5.91,
+                     '2011': 6.5, '2012': 5.84, '2013': 5.91, '2014': 6.41, '2015': 10.67, '2016': 6.29, '2017': 2.95,
+                     '2018': 3.75}
+
+        if ano == ano_atual:
+            return valor
+
+        valor += (inflacoes.get('{}'.format(ano), 2) * 100) / 100
+        return Simulacao.calcular_inflacao(valor, (ano + 1))
 
     def calcular_idade(self, data):
         data_nascimento = data.nascimento
