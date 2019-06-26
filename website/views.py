@@ -23,7 +23,9 @@ class AposentadosDelete(DeleteView):
 
 @login_required
 def updateAposentado(request, key):
-    form = Simulacoes.objects.get(id=key)
+    model = Simulacoes.objects.get(id=key)
+    form = SimulacaoForm(instance=model)
+
     return render(request, 'index.html', {'form': form})
 
 

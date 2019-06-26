@@ -1671,7 +1671,14 @@
   // github.com/igorescobar/jQuery-Mask-Plugin
   $('.cpf').mask('000.000.000-00', {reverse: true});
 
-  var today = moment().format('YYYY-MM-DD');
-  $('#primeira_contribuição').val(today);
-  $('#ultima_contribuição').val(today);
+  preencherDataAtual('#primeira_contribuição');
+  preencherDataAtual('#ultima_contribuição');
+
+  function preencherDataAtual(id) {
+    var today = moment().format('YYYY-MM-DD');
+    var valorAtual = $(id).val();
+    if (!valorAtual) {
+      $(id).val(today);
+    }
+  }
 })(jQuery);

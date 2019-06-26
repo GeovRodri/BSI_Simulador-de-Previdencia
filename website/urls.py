@@ -11,6 +11,6 @@ urlpatterns = [
     url(r'^aposentar$', login_required(Aposentar.as_view())),
     url(r'^listar$', login_required(AposentadosList.as_view()), name='listar'),
     url(r'^delete/(?P<pk>\d+)/$', login_required(AposentadosDelete.as_view())),
-    url(r'^simulacao/(?P<pk>\d+)$', views.updateAposentado),
+    url(r'^simular/(?P<key>\d+)$', views.updateAposentado),
     url('', login_required(Simulacao.as_view()))
 ]
