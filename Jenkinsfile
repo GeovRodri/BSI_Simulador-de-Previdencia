@@ -1,10 +1,9 @@
-
 pipeline {
     agent any
     stages {
         stage('SCM') {
             steps {
-                 git 'https://github.com/GeovRodri/bsi_simulador_previdencia.git'
+                 git branch: 'master', credentialsId: 'github', url: 'git@github.com:GeovRodri/bsi_simulador_previdencia.git'
             }
         }
         stage('Build') {
