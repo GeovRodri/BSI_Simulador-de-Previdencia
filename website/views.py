@@ -145,7 +145,7 @@ class Simulacao(FormView):
         valor_contribuicao += Simulacao.calcular_inflacao(data.ano8, (ano_simulacao - 2))
         valor_contribuicao += Simulacao.calcular_inflacao(data.ano9, (ano_simulacao - 1))
         valor_contribuicao += Simulacao.calcular_inflacao(data.ano10, ano_simulacao)
-        media = valor_contribuicao / 10
+    media = valor_contribuicao / 10
 
         valor_inicial = media * 0.7
         valor_aposentadoria = valor_inicial
