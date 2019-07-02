@@ -19,8 +19,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+            <state relative-caret-position="240">
+              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -239,7 +248,7 @@
       <workItem from="1560816629976" duration="1534000" />
       <workItem from="1560917232808" duration="2448000" />
       <workItem from="1561419016567" duration="29213000" />
-      <workItem from="1562071368265" duration="4265000" />
+      <workItem from="1562071368265" duration="4631000" />
     </task>
     <task id="LOCAL-00001" summary="Criando arquivos estaticos e o template do projeto">
       <created>1557358367372</created>
@@ -465,11 +474,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562075947069</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Invertendo oredem de instalação de depedencias">
+      <created>1562076014737</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1562076014737</updated>
+    </task>
+    <task id="LOCAL-00034" summary="instalando mariadb client">
+      <created>1562076319378</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1562076319378</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99210000" />
+    <option name="totallyTimeSpent" value="99576000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1055" extended-state="6" />
@@ -512,8 +535,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Configurando mysql" />
-    <MESSAGE value="Criando formulario" />
     <MESSAGE value="Corrigindo logout do sistema" />
     <MESSAGE value="Criando validações iniciais" />
     <MESSAGE value="Validando o formulario e calculando o valor da aposentadoria" />
@@ -537,7 +558,9 @@
     <MESSAGE value="Ativando pylint in sonar" />
     <MESSAGE value="Subindo lint do sonar" />
     <MESSAGE value="colocando stage para instalar as depedencias" />
-    <option name="LAST_COMMIT_MESSAGE" value="colocando stage para instalar as depedencias" />
+    <MESSAGE value="Invertendo oredem de instalação de depedencias" />
+    <MESSAGE value="instalando mariadb client" />
+    <option name="LAST_COMMIT_MESSAGE" value="instalando mariadb client" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -625,13 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -757,10 +773,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        <state relative-caret-position="240">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
         </state>
       </provider>
     </entry>

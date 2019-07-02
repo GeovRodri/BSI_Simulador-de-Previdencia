@@ -15,7 +15,6 @@ pipeline {
 
         stage('Depedencies') {
             steps {
-                sh "apt install libmysqlclient-dev"
 				sh "pip3 install -r requirements.txt"
 				sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
             }
