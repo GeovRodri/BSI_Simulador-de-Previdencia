@@ -13,13 +13,18 @@ pipeline {
             }
         }
 
+        stage('Depedencies') {
+            steps {
+				sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
+				sh "pip3 install -r requirements.txt"
+            }
+        }
+
         stage('Sonarqube') {
             environment {
                 scannerHome = tool 'SonarQubeScanner'
             }
             steps {
-                sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
-
                 withSonarQubeEnv('sonarqube') {
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
