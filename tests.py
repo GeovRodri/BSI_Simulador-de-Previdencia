@@ -1,10 +1,7 @@
 import unittest
-
-
-def fun(x):
-    return x + 1
+from Utils import Utils
 
 
 class MyTest(unittest.TestCase):
     def test(self):
-        self.assertEqual(fun(3), 4)
+        self.assertTrue((Utils.calcular_inflacao(200, 2000) > 0))
