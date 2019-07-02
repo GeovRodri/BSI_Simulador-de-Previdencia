@@ -15,8 +15,8 @@ pipeline {
 
         stage('Depedencies') {
             steps {
-				sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
 				sh "pip3 install -r requirements.txt"
+				sh "nosetests -sv --with-xunit --xunit-file=nosetests.xml --with-xcoverage --xcoverage-file=coverage.xml"
             }
         }
 

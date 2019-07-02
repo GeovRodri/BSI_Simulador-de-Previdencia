@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="942b8631-9053-4c83-bc04-0f642b3d98f1" name="Default Changelist" comment="Subindo lint do sonar">
-      <change afterPath="$PROJECT_DIR$/.pylintrc" afterDir="false" />
+    <list default="true" id="942b8631-9053-4c83-bc04-0f642b3d98f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sonar-project.properties" beforeDir="false" afterPath="$PROJECT_DIR$/sonar-project.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Jenkinsfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="270">
+              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -241,7 +239,7 @@
       <workItem from="1560816629976" duration="1534000" />
       <workItem from="1560917232808" duration="2448000" />
       <workItem from="1561419016567" duration="29213000" />
-      <workItem from="1562071368265" duration="4045000" />
+      <workItem from="1562071368265" duration="4265000" />
     </task>
     <task id="LOCAL-00001" summary="Criando arquivos estaticos e o template do projeto">
       <created>1557358367372</created>
@@ -453,11 +451,25 @@
       <option name="project" value="LOCAL" />
       <updated>1562074713122</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Subindo lint do sonar">
+      <created>1562075787754</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1562075787754</updated>
+    </task>
+    <task id="LOCAL-00032" summary="colocando stage para instalar as depedencias">
+      <created>1562075947069</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1562075947069</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98990000" />
+    <option name="totallyTimeSpent" value="99210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1920" height="1055" extended-state="6" />
@@ -500,8 +512,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Adicionando logo e urls" />
-    <MESSAGE value="Adicionando mascara de cpf e criando página de login" />
     <MESSAGE value="Configurando mysql" />
     <MESSAGE value="Criando formulario" />
     <MESSAGE value="Corrigindo logout do sistema" />
@@ -525,7 +535,9 @@
     <MESSAGE value="Adicionando sonarqube" />
     <MESSAGE value="Inserindo erro em identação para testar o sonarqube&#10;removendo waitForQualityGate para passar na build" />
     <MESSAGE value="Ativando pylint in sonar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ativando pylint in sonar" />
+    <MESSAGE value="Subindo lint do sonar" />
+    <MESSAGE value="colocando stage para instalar as depedencias" />
+    <option name="LAST_COMMIT_MESSAGE" value="colocando stage para instalar as depedencias" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateCodeFragment">
@@ -747,8 +759,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="270">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
         </state>
       </provider>
     </entry>
